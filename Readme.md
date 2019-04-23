@@ -8,6 +8,6 @@
 By invoking tsc with no input files, in which case the compiler searches for the tsconfig.json file starting in the current directory and continuing up the parent directory chain.
 By invoking tsc with no input files and a --project (or just -p) command line option that specifies the path of a directory containing a tsconfig.json file, or a path to a valid .json file containing the configurations.
 
-* To make the compiler understand and get typescript warnings, file names must be .tsx.
+* To make the compiler understand and get React typescript warnings, file names must be .tsx.
 * Imports are different in ts files (eg, import * as React from "react")
 * Types must be installed to leverage the types (--save-dev) , popular types are opensourced as DefinitelyTyped
