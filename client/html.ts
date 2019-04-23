@@ -8,6 +8,7 @@
  */
 
 const html = ({ body, title }: { body: string; title: string }) => {
+  return(
   `<!DOCTYPE html>
   <html>
     <head>
@@ -17,7 +18,7 @@ const html = ({ body, title }: { body: string; title: string }) => {
       <div id="app">${body}</div>
     </body>
   </html>
-    `;
+    `);
 };
 
 export default html;
