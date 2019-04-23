@@ -4,7 +4,7 @@ interface AppProps {
   name: string;
 }
 
-const App: React.FunctionComponent<AppProps> = ({ name: string }) => {
+const App: React.FunctionComponent<AppProps> = ({ name }) => {
   return (
   <div>
     {`Hi ${name}. Welcome to React and typescript.`}

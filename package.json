@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run tests",
-    "build": "webpack",
+    "build": "webpack --env.platform=server",
     "start": "node dist/js/server.js"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.1",
     "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "typescript": "^3.4.4",
     "url-loader": "^1.1.2",

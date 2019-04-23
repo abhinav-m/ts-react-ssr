@@ -1,8 +1,9 @@
+const path = require("path")
 const baseConfig = {
   entry: "./server/index.ts",
   output: {
     filename: "js/server.js",
-    path: `${__dirname}/dist`, //Absolute path
+    path:  path.resolve(process.cwd(), 'dist'), //Absolute path
     publicPath: "/" // Relative to server root
   },
   //Enabling source maps for debugging
@@ -24,6 +25,8 @@ const baseConfig = {
           name: "static/media/[name].[hash:8].[ext]"
         }
       },
+       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       {
         test: /(\.scss|\.css)$/,
         use: [
@@ -51,7 +54,10 @@ const baseConfig = {
         }
       }
     ]
-  }
+  },
+  
+    target:  'node'
+  
 };
 
 module.exports = baseConfig;

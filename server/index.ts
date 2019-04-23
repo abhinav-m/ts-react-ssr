@@ -1,12 +1,12 @@
-const express = require("express");
+import * as express from "express";
 import * as React from "react"
 import { renderToString } from "react-dom/server";
 
 import App from "../client/App";
 import html from "../client/html";
 
-const port = 3000;
-const server = express();
+const port= 3000;
+const server= express();
 
 server.use(express.static("dist"));
 
